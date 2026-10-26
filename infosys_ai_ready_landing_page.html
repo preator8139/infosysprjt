@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Ready. Career-Ready. | Infosys Student Campaign Concept</title>
+<style>
+  :root{--navy:#102A43;--blue:#007CC3;--orange:#F36F21;--ink:#17324d;--muted:#607386;--pale:#eef6fb;--line:#dce8f0;--white:#fff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#eef3f7}
+  .page{width:min(1440px,100%);margin:0 auto;background:#fff;overflow:hidden}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:28px 6.5%;border-bottom:1px solid var(--line);background:#fff;gap:20px}
+  .wordmark{font-size:18px;font-weight:800;letter-spacing:.08em;color:var(--navy)}
+  .wordmark span{color:var(--blue)}
+  nav{display:flex;gap:25px;flex-wrap:wrap;font-size:13px;font-weight:700;color:var(--muted)}
+  .hero{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;padding:76px 6.5% 82px;background:linear-gradient(115deg,#f8fbfe 0%,#eef7fc 62%,#fff5ec 100%)}
+  .eyebrow{font-size:12px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--blue);margin-bottom:20px}
+  h1{font-size:clamp(42px,5.2vw,74px);line-height:.99;letter-spacing:-.045em;color:var(--navy);margin:0 0 24px;font-weight:850}
+  h1 em{font-style:normal;color:var(--blue)}
+  .hero p{font-size:18px;line-height:1.65;color:#4d6579;max-width:620px;margin:0 0 30px}
+  .actions{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:15px 20px;border-radius:7px;text-decoration:none;font-size:14px;font-weight:800}
+  .primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px #007cc32a}
+  .secondary{color:var(--navy);border:1px solid #adc5d8;background:#fff}
+  .visual{min-height:380px;border-radius:26px;background:var(--navy);position:relative;overflow:hidden;padding:26px;color:#fff;display:flex;align-items:flex-end;box-shadow:0 25px 60px #102a4320}
+  .orb{position:absolute;border-radius:50%;filter:blur(1px)}
+  .orb.one{width:220px;height:220px;right:3%;top:-25px;background:radial-gradient(circle at 35% 35%,#74d4ff,#007cc3 65%,#034c7e)}
+  .orb.two{width:155px;height:155px;left:12%;top:18%;background:radial-gradient(circle at 35% 35%,#ffc18f,#f36f21 67%,#aa3a00);opacity:.95}
+  .orb.three{width:120px;height:120px;right:16%;bottom:18%;border:1px solid #7bc9f0;background:transparent}
+  .gridlines{position:absolute;inset:0;background-image:linear-gradient(#ffffff13 1px,transparent 1px),linear-gradient(90deg,#ffffff13 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(130deg,transparent,#000)}
+  .visualcard{position:relative;z-index:2;width:100%;border:1px solid #ffffff55;background:#ffffff13;backdrop-filter:blur(9px);border-radius:16px;padding:22px}
+  .visualcard .mini{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#bfe7fa;font-weight:800}
+  .visualcard strong{display:block;font-size:27px;line-height:1.15;margin:9px 0}
+  .visualcard small{color:#dbeaf4;line-height:1.5}
+  .section{padding:70px 6.5%}
+  .section-head{max-width:690px;margin-bottom:30px}
+  .section-head h2{font-size:34px;line-height:1.1;letter-spacing:-.025em;color:var(--navy);margin:0 0 12px}
+  .section-head p{font-size:15px;line-height:1.7;color:var(--muted);margin:0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border:1px solid var(--line);border-radius:15px;padding:25px;background:#fff;min-height:210px}
+  .num{display:inline-flex;width:38px;height:38px;border-radius:10px;background:#e2f3fc;align-items:center;justify-content:center;color:var(--blue);font-weight:900;margin-bottom:20px}
+  .card:nth-child(2) .num{background:#fff0e5;color:var(--orange)}
+  .card h3{font-size:19px;color:var(--navy);margin:0 0 10px}
+  .card p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+  .path{background:var(--navy);color:#fff;padding:64px 6.5%}
+  .path .section-head h2{color:#fff}.path .section-head p{color:#c1d1df}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .step{padding:19px;border-top:2px solid var(--orange);background:#ffffff0c;border-radius:0 0 12px 12px}
+  .step b{display:block;font-size:18px;margin-bottom:8px}.step span{font-size:13px;line-height:1.5;color:#c9d8e5}
+  .checkwrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}
+  .checkpanel{border:1px solid var(--line);border-radius:16px;padding:28px;background:#f9fcfe}
+  .checkpanel h3{margin:0 0 18px;font-size:20px;color:var(--navy)}
+  .checkrow{display:flex;gap:12px;margin:14px 0;line-height:1.5;font-size:14px;color:#496175}
+  .check{flex:0 0 20px;width:20px;height:20px;border-radius:6px;background:#e1f5eb;color:#137649;text-align:center;font-size:13px;font-weight:900}
+  .proof{background:#fff8f2;border:1px solid #f6d8c4;border-radius:15px;padding:23px;margin-top:20px}
+  .proof b{display:block;color:#8a4218;font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+  .proof p{font-size:13px;line-height:1.6;color:#75533e;margin:0}
+  .cta{padding:64px 6.5%;display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(105deg,#eaf7fd,#fff4eb)}
+  .cta h2{font-size:34px;line-height:1.1;color:var(--navy);margin:0 0 10px}.cta p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+  footer{padding:24px 6.5%;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;background:#fff;border-top:1px solid var(--line);font-size:11px;line-height:1.5;color:#738596}
+  @media(max-width:850px){.hero,.checkwrap{grid-template-columns:1fr}.visual{min-height:300px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}nav{display:none}.cta{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Infosys AI-Ready Career-Ready Landing Page">
+  <header class="topbar">
+    <div class="wordmark">INFOSYS <span>/</span> CAREER READY</div>
+    <nav><span>BUILD SKILLS</span><span>CAREER PREP</span><span>EXPLORE CAREERS</span></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">A student campaign concept</div>
+        <h1>Your AI journey<br>deserves a <em>next step.</em></h1>
+        <p>Build practical skills, create projects that show what you can do, and explore early-career opportunities with Infosys.</p>
+        <div class="actions"><a class="btn primary" href="https://www.infosys.com/careers/">Explore Infosys Careers ↗</a><a class="btn secondary" href="#career-prep">Your AI career checklist ↓</a></div>
+      </div>
+      <div class="visual"><div class="gridlines"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div><div class="visualcard"><div class="mini">Your next chapter</div><strong>AI-ready.<br>Career-ready.</strong><small>Learn with purpose. Build evidence. Explore what's next.</small></div></div>
+    </section>
+    <section class="section" id="build-skills">
+      <div class="section-head"><div class="eyebrow">Turn learning into momentum</div><h2>Make your skills visible.</h2><p>Move beyond watching tutorials. Build a clear story around what you have learned, what you have created, and the roles you want to pursue.</p></div>
+      <div class="cards">
+        <article class="card"><div class="num">01</div><h3>Build AI foundations</h3><p>Strengthen programming, data and AI fundamentals through focused practice and small learning goals.</p></article>
+        <article class="card"><div class="num">02</div><h3>Create proof of skill</h3><p>Build a portfolio project, document your decisions and keep your repository readable.</p></article>
+        <article class="card"><div class="num">03</div><h3>Prepare for applications</h3><p>Read role requirements, tailor your résumé and practise explaining your projects clearly.</p></article>
+      </div>
+    </section>
+    <section class="path">
+      <div class="section-head"><div class="eyebrow" style="color:#86d8ff">The four-step path</div><h2>Small steps. Real progress.</h2><p>A simple framework for making your preparation more focused and trackable.</p></div>
+      <div class="steps"><div class="step"><b>01 · Learn</b><span>Choose one skill and practise consistently.</span></div><div class="step"><b>02 · Build</b><span>Turn what you learn into a project.</span></div><div class="step"><b>03 · Prepare</b><span>Polish your résumé and interview stories.</span></div><div class="step"><b>04 · Explore</b><span>Review current roles and their eligibility requirements.</span></div></div>
+    </section>
+    <section class="section" id="career-prep">
+      <div class="checkwrap">
+        <div><div class="eyebrow">Your career checklist</div><div class="section-head"><h2>Ready to take your next step?</h2><p>Use this checklist to make your preparation concrete before you apply. Match your skills to the requirements of each role rather than relying on a generic application.</p></div><a class="btn primary" href="https://www.infosys.com/careers/">Review official opportunities ↗</a></div>
+        <div class="checkpanel"><h3>Before you apply</h3><div class="checkrow"><span class="check">✓</span><span>One focused AI or software project you can explain.</span></div><div class="checkrow"><span class="check">✓</span><span>A readable GitHub profile or portfolio with clear project notes.</span></div><div class="checkrow"><span class="check">✓</span><span>A résumé tailored to the role you are applying for.</span></div><div class="checkrow"><span class="check">✓</span><span>A clear understanding of eligibility, skills and application steps.</span></div>
+          <div class="proof"><b>Hiring context · source note</b><p>News reports described approximately 18,000 fresher onboardings across the first nine months of FY2026 and a target of 20,000 for the full financial year. These aggregate figures are not a job guarantee or confirmation of AI-specific vacancies. <a href="https://www.storyboard18.com/amp/how-it-works/infosys-headcount-rises-by-5000-in-q3-plans-to-add-20000-freshers-in-fy26-87643.htm" style="color:#8a4218;font-weight:700">Read source ↗</a></p></div>
+        </div>
+      </div>
+    </section>
+    <section class="cta"><div><div class="eyebrow">Your next move starts here</div><h2>Make your next move count.</h2><p>Explore official roles, eligibility criteria and application information directly from Infosys.</p></div><a class="btn primary" href="https://www.infosys.com/careers/">Explore Infosys Careers ↗</a></section>
+  </main>
+  <footer><span>INFOSYS · AI-READY. CAREER-READY.</span><span>Student concept campaign. Not an official Infosys communication. Check the official careers site for current openings and eligibility.</span></footer>
+</div>
+</body>
+</html>
